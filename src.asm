@@ -9,13 +9,19 @@ start:
 	mov ds, ax
 
 
-	mov si, text_string	; Put string position into SI
+	mov si, name	    ; Put string position into SI
+	call print_string	; Call our string-printing routine
+	mov si, college	    ; Put string position into SI
+	call print_string	; Call our string-printing routine
+	mov si, intesests	; Put string position into SI
 	call print_string	; Call our string-printing routine
 
 	jmp $			; Jump here - infinite loop!
 
 
-	text_string db 'This is my cool new OS!', 0
+	name db 'Hrishikesh Barman\n', 0
+	college db 'GIMT Guwahati', 0
+	intesests db 'Systems and Network Programming', 0
 
 
 print_string:		; Routine: output string in SI to screen
