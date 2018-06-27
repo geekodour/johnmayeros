@@ -19,9 +19,9 @@ start:
 	jmp $			; Jump here - infinite loop!
 
 
-	name db 'Hrishikesh Barman\n', 0
-	college db 'GIMT Guwahati', 0
-	intesests db 'Systems and Network Programming', 0
+	name db 'Hrishikesh Barman ', 0x0A, 0
+	college db 'GIMT Guwahati ', 0x0A, 0
+	intesests db 'Systems and Network Programming', 0x0a, 0x0d, 0
 
 
 print_string:		; Routine: output string in SI to screen

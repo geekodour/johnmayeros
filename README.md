@@ -8,18 +8,10 @@ Basically you'll get my extremely tiny resume of me if you run this on your comp
 
 ## Instructions
 - Make changes to the `.asm` file if you want to.
-- Assemble the file:
-```
-nasm -f bin -o johnmayeros.bin src.asm
-```
-- Write the binary to a floppy drive
-```
-dd status=noxfer conv=notrunc if=johnmayeros.bin of=johnmayeros.flp
-```
-- Run your OS
-```
-qemu-system-i386 -fda johnmayeros.flp
-```
+- `make`
+- `make run`
+
+(See Makefile for commands.)
 
 ## Reference
 [MikeOS](http://mikeos.sourceforge.net/write-your-own-os.html)
